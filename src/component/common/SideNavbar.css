@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.side-nav {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.side-nav .btn{
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background-color: wheat;
+  border: 1px solid #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+.side-nav .btn.click{
+  left: 260px;
+}
+.side-nav .btn span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+  position: relative;
+  top: -5px;
+  left: -2px;
+}
+.side-nav .btn.click span:before{
+  content: '\f00d';
+}
+.side-nav .sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background:wheat;
+  transition: left 0.4s ease;
+}
+.side-nav .sidebar.show{
+  left: 0px;
+}
+.side-nav .sidebar .text{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 1px;
+}
+.side-nav nav ul{
+  background: wheat;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+.side-nav nav ul li{
+  line-height: 50px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.side-nav nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.side-nav nav ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+.side-nav nav ul li.active a{
+  color: cyan;
+  background: wheat;
+  border-left-color: cyan;
+}
+.side-nav nav ul li a:hover{
+  background: wheat;
+}
+.side-nav nav ul ul{
+  position: static;
+  display: none;
+}
+.side-nav nav ul .feat-show.show{
+  display: block;
+}
+.side-nav nav ul .serv-show.show1{
+  display: block;
+}
+.side-nav nav ul ul li{
+  line-height: 42px;
+  border-top: none;
+}
+.side-nav nav ul ul li a{
+  font-size: 14px;
+  color: #e6e6e6;
+  padding-left: 35px;
+}
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: wheat;
+  border-left-color: transparent;
+}
+.side-nav nav ul ul li a:hover{
+  color: cyan!important;
+  background:wheat!important;
+}
+.side-nav nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+.side-nav nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+.side-nav .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: wheat;
+  z-index: -1;
+  text-align: center;
+}
+.side-nav .content .header{
+  font-size: 45px;
+  font-weight: 600;
+}
+.side-nav .content p{
+  font-size: 14px;
+  font-weight: 500;
+}
